@@ -1,5 +1,6 @@
 
 if (!require(XML)) install.packages('XML')
+if (!require(plyr)) install.packages('plyr')
 
 library(XML)
 library(plyr)
