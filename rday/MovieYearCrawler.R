@@ -4,7 +4,7 @@ if (!require(plyr)) install.packages('plyr')
 
 library(XML)
 library(plyr)
-DIR <- "~/datascience/rday/"
+DIR <- "~/datascience/rday/csv_files/"
 setwd(dir=DIR)
 
 #
