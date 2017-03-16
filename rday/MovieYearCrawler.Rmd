@@ -1,0 +1,21 @@
+---
+title: "Movie WebCrawler Report"
+output: html_document
+author: "Krishna Mohan"
+---
+
+## Todays Date `r Sys.Date()`
+
+## Source Code
+
+This is Markdown Document and the source code is posted @ **[github.com](https://github.com/mohankri/datascience/tree/master/rday)**
+
+
+## Total Number of Years in Report
+```{r echo=FALSE, message=FALSE}
+  DIR <- "~/datascience/rday/"
+  setwd(DIR)
+  file<-list.files(paste(DIR, "./csv_files/",sep=""))
+  summary(file)
+```
+
