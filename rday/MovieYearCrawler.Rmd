@@ -52,6 +52,17 @@ Film Critics/Film Magzines can analyzes further with changing times how the tast
 audience have occurred and can be a dataset for other datascience studies being done  
 for behaviour changes occuring in the society.
 
+### Data Acquisition
+We will acquire the data from http://www.the-numbers.com/movies. The webcrawler  
+will acquire the dataset for each year and perform DataWrangling and present it
+as a single source dataset.
+
+Release Date | Movie       | Genre   | Production Budget | Domestic BoxOffice To Date
+-------------|-------------|---------|-------------------|---------------------------
+September 5  | Intolerance |Adventure| $200,000          | $8,000,000
+December 31  | The Cabinet of Dr. Caligari| Horror | $150,000 | $300,000 
+
+There are source for data acquisition and with project webcrawler can be extend for   other sources and data wrangling process can mitigate/resolve difference appropriately.
 
 ### Deliverables
 This project will include R code and will be posted here 
@@ -60,7 +71,8 @@ This project will include R code and will be posted here
 It will also include result html (using R-markdown) have answer to the problem  
 stated above.
 
-It will also include dataset collected
+Deliverables will include complete dataset, webCrawler for performing any update
+of dataset.
 
 ```{r echo=FALSE, message=FALSE}
   DIR <- "~/datascience/rday/"
