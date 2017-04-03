@@ -1,0 +1,1756 @@
+company,Product,number,address,geocode,geocode2,json,lat_lng,city,country,gender,initial,name
+PHILLIPS,Radio,5,Groningensingel 147,"Groningensingel 147, arnhem","Groningensingel 147, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""147"",
+               ""short_name"" : ""147"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Groningensingel"",
+               ""short_name"" : ""Groningensingel"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 EG"",
+               ""short_name"" : ""6835 EG"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Groningensingel 147, 6835 EG Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.9560848,
+               ""lng"" : 5.907578099999999
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9574337802915,
+                  ""lng"" : 5.908927080291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9547358197085,
+                  ""lng"" : 5.906229119708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJb-0cZICmx0cREbDz2dXXj5o"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9560848, 5.907578099999999",arnhem,the netherlands,M,P., Jansen
+PHILLIPS,Radio,43,Groningensingel 148,"Groningensingel 148, arnhem","Groningensingel 148, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""148"",
+               ""short_name"" : ""148"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Groningensingel"",
+               ""short_name"" : ""Groningensingel"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835"",
+               ""short_name"" : ""6835"",
+               ""types"" : [ ""postal_code"", ""postal_code_prefix"" ]
+            }
+         ],
+         ""formatted_address"" : ""Groningensingel 148, 6835 Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.95630370000001,
+                  ""lng"" : 5.9073917
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9562935,
+                  ""lng"" : 5.9073828
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.95630370000001,
+               ""lng"" : 5.9073828
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.95764758029151,
+                  ""lng"" : 5.908736230291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.95494961970851,
+                  ""lng"" : 5.906038269708497
+               }
+            }
+         },
+         ""place_id"" : ""EitHcm9uaW5nZW5zaW5nZWwgMTQ4LCA2ODM1IEFybmhlbSwgTmVkZXJsYW5k"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.95630370000001, 5.9073828",arnhem,the netherlands,M,P., Hansen
+PHILLIPS,Laptop,3,Groningensingel 149,"Groningensingel 149, arnhem","Groningensingel 149, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""149"",
+               ""short_name"" : ""149"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Groningensingel"",
+               ""short_name"" : ""Groningensingel"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 EG"",
+               ""short_name"" : ""6835 EG"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Groningensingel 149, 6835 EG Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.956094,
+               ""lng"" : 5.9075491
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9574429802915,
+                  ""lng"" : 5.908898080291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9547450197085,
+                  ""lng"" : 5.906200119708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJPXMaZICmx0cRvd2I9bnz5vk"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.956094, 5.9075491",arnhem,the netherlands,M,J., Gansen
+PHILLIPS,Laptop,34,Groningensingel 150,"Groningensingel 150, arnhem","Groningensingel 150, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""150"",
+               ""short_name"" : ""150"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Groningensingel"",
+               ""short_name"" : ""Groningensingel"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835"",
+               ""short_name"" : ""6835"",
+               ""types"" : [ ""postal_code"", ""postal_code_prefix"" ]
+            }
+         ],
+         ""formatted_address"" : ""Groningensingel 150, 6835 Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9563012,
+                  ""lng"" : 5.907384
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.956291,
+                  ""lng"" : 5.907375099999999
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9563012,
+               ""lng"" : 5.907375099999999
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9576450802915,
+                  ""lng"" : 5.908728530291501
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9549471197085,
+                  ""lng"" : 5.906030569708498
+               }
+            }
+         },
+         ""place_id"" : ""EitHcm9uaW5nZW5zaW5nZWwgMTUwLCA2ODM1IEFybmhlbSwgTmVkZXJsYW5k"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9563012, 5.907375099999999",arnhem,the netherlands,M,P., Mansen
+PHILLIPS,Laptop,12,Groningensingel 151,"Groningensingel 151, arnhem","Groningensingel 151, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""151"",
+               ""short_name"" : ""151"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Groningensingel"",
+               ""short_name"" : ""Groningensingel"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 EG"",
+               ""short_name"" : ""6835 EG"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Groningensingel 151, 6835 EG Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.956112,
+               ""lng"" : 5.907534699999999
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.95746098029151,
+                  ""lng"" : 5.908883680291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.95476301970851,
+                  ""lng"" : 5.906185719708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJu1AWZICmx0cR-3kCnJYFD9w"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.956112, 5.907534699999999",arnhem,the netherlands,M,P., Fransen
+PHILLIPS,Radio,23,Groningensingel 152,"Groningensingel 152, arnhem","Groningensingel 152, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""152"",
+               ""short_name"" : ""152"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Groningensingel"",
+               ""short_name"" : ""Groningensingel"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835"",
+               ""short_name"" : ""6835"",
+               ""types"" : [ ""postal_code"", ""postal_code_prefix"" ]
+            }
+         ],
+         ""formatted_address"" : ""Groningensingel 152, 6835 Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9562983,
+                  ""lng"" : 5.9073752
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.95628809999999,
+                  ""lng"" : 5.9073663
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9562983,
+               ""lng"" : 5.9073663
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.95764218029149,
+                  ""lng"" : 5.908719730291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.95494421970849,
+                  ""lng"" : 5.906021769708497
+               }
+            }
+         },
+         ""place_id"" : ""EitHcm9uaW5nZW5zaW5nZWwgMTUyLCA2ODM1IEFybmhlbSwgTmVkZXJsYW5k"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9562983, 5.9073663",arnhem,the netherlands,M,P., Franssen
+AKZO,TV,43,Leeuwardenweg 178,"Leeuwardenweg 178, arnhem","Leeuwardenweg 178, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""178"",
+               ""short_name"" : ""178"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Leeuwardenweg"",
+               ""short_name"" : ""Leeuwardenweg"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KX"",
+               ""short_name"" : ""6835 KX"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Leeuwardenweg 178, 6835 KX Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9472371,
+                  ""lng"" : 5.90829
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9472289,
+                  ""lng"" : 5.9082767
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9472371,
+               ""lng"" : 5.90829
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9485819802915,
+                  ""lng"" : 5.909632330291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9458840197085,
+                  ""lng"" : 5.906934369708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EixMZWV1d2FyZGVud2VnIDE3OCwgNjgzNSBLWCBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9472371, 5.90829",arnhem,the netherlands,M,P. , Bansen
+AKZO,TV,12,Leeuwardenweg 179,"Leeuwardenweg 179, arnhem","Leeuwardenweg 179, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""179"",
+               ""short_name"" : ""179"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Leeuwardenweg"",
+               ""short_name"" : ""Leeuwardenweg"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KX"",
+               ""short_name"" : ""6835 KX"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Leeuwardenweg 179, 6835 KX Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9472371,
+                  ""lng"" : 5.90829
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9472289,
+                  ""lng"" : 5.9082767
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9472371,
+               ""lng"" : 5.90829
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9485819802915,
+                  ""lng"" : 5.909632330291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9458840197085,
+                  ""lng"" : 5.906934369708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EixMZWV1d2FyZGVud2VnIDE3OSwgNjgzNSBLWCBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9472371, 5.90829",arnhem,the netherlands,M,P. , Vansen
+AKZO,Laptop,5,Leeuwardenweg 180,"Leeuwardenweg 180, arnhem","Leeuwardenweg 180, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""180"",
+               ""short_name"" : ""180"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Leeuwardenweg"",
+               ""short_name"" : ""Leeuwardenweg"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KX"",
+               ""short_name"" : ""6835 KX"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Leeuwardenweg 180, 6835 KX Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9472371,
+                  ""lng"" : 5.90829
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9472289,
+                  ""lng"" : 5.9082767
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9472371,
+               ""lng"" : 5.90829
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9485819802915,
+                  ""lng"" : 5.909632330291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9458840197085,
+                  ""lng"" : 5.906934369708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EixMZWV1d2FyZGVud2VnIDE4MCwgNjgzNSBLWCBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9472371, 5.90829",arnhem,the netherlands,M,P. , Bransen
+AKZO,Radio,34,Leeuwardenweg 181,"Leeuwardenweg 181, arnhem","Leeuwardenweg 181, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""181"",
+               ""short_name"" : ""181"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Leeuwardenweg"",
+               ""short_name"" : ""Leeuwardenweg"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KX"",
+               ""short_name"" : ""6835 KX"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Leeuwardenweg 181, 6835 KX Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9472371,
+                  ""lng"" : 5.90829
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9472289,
+                  ""lng"" : 5.9082767
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9472371,
+               ""lng"" : 5.90829
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9485819802915,
+                  ""lng"" : 5.909632330291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9458840197085,
+                  ""lng"" : 5.906934369708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EixMZWV1d2FyZGVud2VnIDE4MSwgNjgzNSBLWCBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9472371, 5.90829",arnhem,the netherlands,M,P., Janssen
+AKZO,Tablet,5,Leeuwardenweg 182,"Leeuwardenweg 182, arnhem","Leeuwardenweg 182, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""182"",
+               ""short_name"" : ""182"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Leeuwardenweg"",
+               ""short_name"" : ""Leeuwardenweg"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KX"",
+               ""short_name"" : ""6835 KX"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Leeuwardenweg 182, 6835 KX Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9472371,
+                  ""lng"" : 5.90829
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9472289,
+                  ""lng"" : 5.9082767
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9472371,
+               ""lng"" : 5.90829
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9485819802915,
+                  ""lng"" : 5.909632330291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9458840197085,
+                  ""lng"" : 5.906934369708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EixMZWV1d2FyZGVud2VnIDE4MiwgNjgzNSBLWCBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9472371, 5.90829",arnhem,the netherlands,F,L.,  Rokken
+AKZO,Tablet,9,Leeuwardenweg 183,"Leeuwardenweg 183, arnhem","Leeuwardenweg 183, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""183"",
+               ""short_name"" : ""183"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Leeuwardenweg"",
+               ""short_name"" : ""Leeuwardenweg"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KX"",
+               ""short_name"" : ""6835 KX"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Leeuwardenweg 183, 6835 KX Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9472371,
+                  ""lng"" : 5.90829
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9472289,
+                  ""lng"" : 5.9082767
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9472371,
+               ""lng"" : 5.90829
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9485819802915,
+                  ""lng"" : 5.909632330291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9458840197085,
+                  ""lng"" : 5.906934369708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EixMZWV1d2FyZGVud2VnIDE4MywgNjgzNSBLWCBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9472371, 5.90829",arnhem,the netherlands,F,L.,  Lokken
+AKZO,Laptop,8,Leeuwardenweg 184,"Leeuwardenweg 184, arnhem","Leeuwardenweg 184, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""184"",
+               ""short_name"" : ""184"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Leeuwardenweg"",
+               ""short_name"" : ""Leeuwardenweg"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KX"",
+               ""short_name"" : ""6835 KX"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Leeuwardenweg 184, 6835 KX Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9472371,
+                  ""lng"" : 5.90829
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9472289,
+                  ""lng"" : 5.9082767
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9472371,
+               ""lng"" : 5.90829
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9485819802915,
+                  ""lng"" : 5.909632330291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9458840197085,
+                  ""lng"" : 5.906934369708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EixMZWV1d2FyZGVud2VnIDE4NCwgNjgzNSBLWCBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9472371, 5.90829",arnhem,the netherlands,F,L.,  Mokken
+PHILLIPS,Radio,56,Delfzijlstraat 54,"Delfzijlstraat 54, arnhem","Delfzijlstraat 54, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""54"",
+               ""short_name"" : ""54"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CR"",
+               ""short_name"" : ""6835 CR"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 54, 6835 CR Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.95199119999999,
+               ""lng"" : 5.9002864
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.95334018029149,
+                  ""lng"" : 5.901635380291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.95064221970849,
+                  ""lng"" : 5.898937419708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJT8zmanymx0cRS6h91ER6vCM"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.95199119999999, 5.9002864",arnhem,the netherlands,F,L.,  Mokken
+PHILLIPS,TV,67,Delfzijlstraat 55,"Delfzijlstraat 55, arnhem","Delfzijlstraat 55, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""55"",
+               ""short_name"" : ""55"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CM"",
+               ""short_name"" : ""6835 CM"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 55, 6835 CM Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.95347839999999,
+               ""lng"" : 5.8993433
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9548273802915,
+                  ""lng"" : 5.900692280291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9521294197085,
+                  ""lng"" : 5.897994319708498
+               }
+            }
+         },
+         ""place_id"" : ""ChIJ55R-qn6mx0cRk0GpzVNyeQI"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.95347839999999, 5.8993433",arnhem,the netherlands,F,L.,  Mokken
+PHILLIPS,TV,21,Delfzijlstraat 56,"Delfzijlstraat 56, arnhem","Delfzijlstraat 56, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""56"",
+               ""short_name"" : ""56"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CR"",
+               ""short_name"" : ""6835 CR"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 56, 6835 CR Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.95193709999999,
+               ""lng"" : 5.900343899999999
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9532860802915,
+                  ""lng"" : 5.901692880291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9505881197085,
+                  ""lng"" : 5.898994919708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJTZf0anymx0cRzqLDg6ueEic"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.95193709999999, 5.900343899999999",arnhem,the netherlands,F,L.,  Mokken
+VAN HOUTEN,Laptop,45,Delfzijlstraat 57,"Delfzijlstraat 57, arnhem","Delfzijlstraat 57, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""57"",
+               ""short_name"" : ""57"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CM"",
+               ""short_name"" : ""6835 CM"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 57, 6835 CM Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.9534423,
+               ""lng"" : 5.899386499999999
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9547912802915,
+                  ""lng"" : 5.900735480291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9520933197085,
+                  ""lng"" : 5.898037519708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJZW_ZAXymx0cR2vzskm7Wqro"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9534423, 5.899386499999999",arnhem,the netherlands,F,L.,  Sokken
+VAN HOUTEN,TV,56,Delfzijlstraat 58,"Delfzijlstraat 58, arnhem","Delfzijlstraat 58, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""58"",
+               ""short_name"" : ""58"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CR"",
+               ""short_name"" : ""6835 CR"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 58, 6835 CR Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.9518919,
+               ""lng"" : 5.900401599999999
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9532408802915,
+                  ""lng"" : 5.901750580291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9505429197085,
+                  ""lng"" : 5.899052619708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJl2l7anymx0cRmyTMvSGWcTs"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9518919, 5.900401599999999",arnhem,the netherlands,F,L.,  Wokken
+VAN HOUTEN,TV,65,Delfzijlstraat 59,"Delfzijlstraat 59, arnhem","Delfzijlstraat 59, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""59"",
+               ""short_name"" : ""59"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CM"",
+               ""short_name"" : ""6835 CM"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 59, 6835 CM Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.95309049999999,
+               ""lng"" : 5.899673399999999
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.95443948029149,
+                  ""lng"" : 5.901022380291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.95174151970849,
+                  ""lng"" : 5.898324419708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJwdmGBHymx0cRPmhe1Up8TJo"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.95309049999999, 5.899673399999999",arnhem,the netherlands,F,L.,  Kokken
+VAN HOUTEN,Laptop,21,Delfzijlstraat 60,"Delfzijlstraat 60, arnhem","Delfzijlstraat 60, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""60"",
+               ""short_name"" : ""60"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CR"",
+               ""short_name"" : ""6835 CR"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 60, 6835 CR Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.9518468,
+               ""lng"" : 5.9004302
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.95319578029149,
+                  ""lng"" : 5.901779180291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9504978197085,
+                  ""lng"" : 5.899081219708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJy791anymx0cRCHt1VJ1VnAM"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9518468, 5.9004302",arnhem,the netherlands,F,L.,  Bokken
+VAN HOUTEN,Radio,23,Delfzijlstraat 61,"Delfzijlstraat 61, arnhem","Delfzijlstraat 61, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""61"",
+               ""short_name"" : ""61"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Delfzijlstraat"",
+               ""short_name"" : ""Delfzijlstraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 CM"",
+               ""short_name"" : ""6835 CM"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Delfzijlstraat 61, 6835 CM Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.9530453,
+               ""lng"" : 5.899731099999999
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9543942802915,
+                  ""lng"" : 5.901080080291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9516963197085,
+                  ""lng"" : 5.898382119708497
+               }
+            }
+         },
+         ""place_id"" : ""ChIJ4xGUBHymx0cRMcoVGeTmekw"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9530453, 5.899731099999999",arnhem,the netherlands,F,L.,  Dokken
+UNILEVER,Laptop,3,Jourestraat 23,"Jourestraat 23, arnhem","Jourestraat 23, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""Jourestraat"",
+               ""short_name"" : ""Jourestraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835"",
+               ""short_name"" : ""6835"",
+               ""types"" : [ ""postal_code"", ""postal_code_prefix"" ]
+            }
+         ],
+         ""formatted_address"" : ""Jourestraat, 6835 Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9482948,
+                  ""lng"" : 5.909061299999999
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9473843,
+                  ""lng"" : 5.9077493
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9478222,
+               ""lng"" : 5.9083311
+            },
+            ""location_type"" : ""GEOMETRIC_CENTER"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9491885302915,
+                  ""lng"" : 5.909754280291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9464905697085,
+                  ""lng"" : 5.907056319708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""ChIJjXObKYamx0cRXUAuBT-j300"",
+         ""types"" : [ ""route"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9478222, 5.9083311",arnhem,the netherlands,F,L.,  Gokken
+UNILEVER,Tablet,4,Jourestraat 24,"Jourestraat 24, arnhem","Jourestraat 24, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""24"",
+               ""short_name"" : ""24"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Jourestraat"",
+               ""short_name"" : ""Jourestraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835 KT"",
+               ""short_name"" : ""6835 KT"",
+               ""types"" : [ ""postal_code"" ]
+            }
+         ],
+         ""formatted_address"" : ""Jourestraat 24, 6835 KT Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""location"" : {
+               ""lat"" : 51.947425,
+               ""lng"" : 5.9084813
+            },
+            ""location_type"" : ""ROOFTOP"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9487739802915,
+                  ""lng"" : 5.909830280291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9460760197085,
+                  ""lng"" : 5.907132319708498
+               }
+            }
+         },
+         ""place_id"" : ""ChIJ6592g4imx0cRaK_4hjuHYrI"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.947425, 5.9084813",arnhem,the netherlands,F,L.,  Stokken
+UNILEVER,Tablet,6,Jourestraat 25,"Jourestraat 25, arnhem","Jourestraat 25, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""Jourestraat"",
+               ""short_name"" : ""Jourestraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835"",
+               ""short_name"" : ""6835"",
+               ""types"" : [ ""postal_code"", ""postal_code_prefix"" ]
+            }
+         ],
+         ""formatted_address"" : ""Jourestraat, 6835 Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9482948,
+                  ""lng"" : 5.909061299999999
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9473843,
+                  ""lng"" : 5.9077493
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9478222,
+               ""lng"" : 5.9083311
+            },
+            ""location_type"" : ""GEOMETRIC_CENTER"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9491885302915,
+                  ""lng"" : 5.909754280291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9464905697085,
+                  ""lng"" : 5.907056319708498
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""ChIJjXObKYamx0cRXUAuBT-j300"",
+         ""types"" : [ ""route"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9478222, 5.9083311",arnhem,the netherlands,F,L.,  Rokken
+UNILEVER,Tablet,8,Jourestraat 26,"Jourestraat 26, arnhem","Jourestraat 26, arnhem, the netherlands","{
+   ""results"" : [
+      {
+         ""address_components"" : [
+            {
+               ""long_name"" : ""26"",
+               ""short_name"" : ""26"",
+               ""types"" : [ ""street_number"" ]
+            },
+            {
+               ""long_name"" : ""Jourestraat"",
+               ""short_name"" : ""Jourestraat"",
+               ""types"" : [ ""route"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""locality"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Arnhem"",
+               ""short_name"" : ""Arnhem"",
+               ""types"" : [ ""administrative_area_level_2"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Gelderland"",
+               ""short_name"" : ""GE"",
+               ""types"" : [ ""administrative_area_level_1"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""Netherlands"",
+               ""short_name"" : ""NL"",
+               ""types"" : [ ""country"", ""political"" ]
+            },
+            {
+               ""long_name"" : ""6835"",
+               ""short_name"" : ""6835"",
+               ""types"" : [ ""postal_code"", ""postal_code_prefix"" ]
+            }
+         ],
+         ""formatted_address"" : ""Jourestraat 26, 6835 Arnhem, Netherlands"",
+         ""geometry"" : {
+            ""bounds"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9482454,
+                  ""lng"" : 5.907826699999999
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9482374,
+                  ""lng"" : 5.9078132
+               }
+            },
+            ""location"" : {
+               ""lat"" : 51.9482454,
+               ""lng"" : 5.907826699999999
+            },
+            ""location_type"" : ""RANGE_INTERPOLATED"",
+            ""viewport"" : {
+               ""northeast"" : {
+                  ""lat"" : 51.9495903802915,
+                  ""lng"" : 5.909168930291502
+               },
+               ""southwest"" : {
+                  ""lat"" : 51.9468924197085,
+                  ""lng"" : 5.906470969708497
+               }
+            }
+         },
+         ""partial_match"" : true,
+         ""place_id"" : ""EiZKb3VyZXN0cmFhdCAyNiwgNjgzNSBBcm5oZW0sIE5lZGVybGFuZA"",
+         ""types"" : [ ""street_address"" ]
+      }
+   ],
+   ""status"" : ""OK""
+}
+","51.9482454, 5.907826699999999",arnhem,the netherlands,F,L.,  Rokken
