@@ -1,0 +1,84 @@
+---
+title: "Data Science: Movie Trends Past/Present & Future"
+output: html_document
+---
+  
+**Mentor : Sneha Runwal**  
+**Student: Krishna Mohan **
+
+### Problem Definition
+
+This data science project intent to analysize movies trends from available dataset  
+available from last 100+ years.
+
+Asking appropriate question or performing EDA (Exploratory Data Analysis) with the  
+available dataset will help answer various trends in the past, present and probable   
+future trends.
+
+We expect that we will able to produce/answer following answer with the available  
+dataset that will be of great help to the target audience.
+
+We are asking the following question with the available dataset  
+
+* What's has been the trend of Movie Genre being made in last 100+ yrs ?
+* What's has been the production budget trend ?
+* What's has been the production budget per Genre ?
+* What's has been the domestic box office collection ?
+* What's type of genre tend to maximize profit for production houses ?
+* What's month of year sees minimum/maximum movie releases ?
+
+### Target Audience 
+
+This exploratory study is intent to target focus group who are related to entertainment
+industry. 
+
+1. Production Houses
+    + Disney
+    + Universal Studio
+2. Entertainment Media Industry
+    + Film Magzines.
+    + Film Critics.
+3. New entrepreneur to the Movie Industry.
+4. Theatre Owner.
+
+Individual client can see ongoing trends and apply predictive analysis with answer  
+available for the above question. With the limited budget available for each production  
+houses, better and wise decision can be made to fund genre to maximize profit.
+
+Theater Owner can better decide on leasing theater space as volume of movie release  
+varies for each month.
+
+Film Critics/Film Magzines can analyzes further with changing times how the taste of  
+audience have occurred and can be a dataset for other datascience studies being done  
+for behaviour changes occuring in the society.
+
+### Data Acquisition
+We will acquire the data from http://www.the-numbers.com/movies. The webcrawler  
+will acquire the dataset for each year and perform DataWrangling and present it
+as a single source dataset.
+
+Release Date | Movie       | Genre   | Production Budget | Domestic BoxOffice To Date
+-------------|-------------|---------|-------------------|---------------------------
+September 5  | Intolerance |Adventure| $200,000          | $8,000,000
+December 31  | The Cabinet of Dr. Caligari| Horror | $150,000 | $300,000 
+
+There are source for data acquisition and with project webcrawler can be extend for   other sources and data wrangling process can mitigate/resolve difference appropriately.
+
+### Deliverables
+This project will include R code and will be posted here 
+**[github.com](https://github.com/mohankri/datascience/tree/master/rday)**
+
+It will also include result html (using R-markdown) have answer to the problem  
+stated above.
+
+Deliverables will include complete dataset, webCrawler for performing any update
+of dataset.
+
+```{r echo=FALSE, message=FALSE}
+  DIR <- "~/datascience/rday/"
+  setwd(DIR)
+  file<-list.files(paste(DIR, "./csv_files/",sep=""))
+```
+
+We currently have collected dataset for last : __`r length(file)`__ years  
+
