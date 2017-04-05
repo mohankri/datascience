@@ -9,17 +9,22 @@ merge_dataset <- function() {
   for (fname in f) {
     print(paste("read ", fname))
     if (!exists("fdataset")) {
-      fdataset<-read.csv(paste(csv_path,fname, sep=""), header=TRUE)
+      #fdataset<-read.csv(paste(csv_path, fname, sep=""), header=TRUE, sep=",")
+      fdataset<-read.table(paste(csv_path, fname, sep=""), header=TRUE, sep=",", colClasses = "character")
     } else if (exists("fdataset")) {
-      temp_dataset<-read.csv(paste(csv_path, fname, sep=""), header=TRUE)
+      temp_dataset<-read.csv(paste(csv_path, fname, sep=""), header=TRUE, sep=",", colClasses = "character")
       fdataset<-rbind(fdataset, temp_dataset)
       rm(temp_dataset)
     }
     result<-fdataset
+    #return(result)
   }
   return(result)
 }
 
 final<-merge_dataset()
 write.csv(final, file=paste(DIR, "MergeDataSet.csv", sep=""), row.names = FALSE)
+#write.table(final, file=paste(DIR, "MergeDataSet.csv", sep=""), row.names = FALSE, sep=",")
+
 rm(final)
+
