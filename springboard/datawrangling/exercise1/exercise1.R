@@ -3,7 +3,7 @@ library(xlsx)
 library(dplyr)
 
 
-refine <- read_excel("~/datascience/springboard/datawrangling/refine.xls")
+refine <- read_excel("~/datascience/springboard/datawrangling/exercise1/refine.xls")
 
 fix_company <- function(df) {
   df$company <- tolower(sub("*.*.PS", "PHILLIPS", df$company, ignore.case = TRUE))
@@ -74,5 +74,5 @@ add_company_column <- function(df) {
 
 new_refine <- add_company_column(new_refine)
 
-write.csv(new_refine, file="~/datascience/springboard/datawrangling/refine_original.csv", row.names = FALSE)
+write.csv(new_refine, file="~/datascience/springboard/datawrangling/exercise1/refine_original.csv", row.names = FALSE)
 
