@@ -1,24 +1,42 @@
+---
+title: "Project (Rough Draft)"
+output: html_document
+---
+
+# Number of Movies/Year
+
+```{r echo=FALSE, message=FALSE}
 library(dplyr)
 library(ggplot2)
 DIR<-paste(Sys.getenv("HOME"), "/datascience/springboard/project/", sep="")
 setwd(DIR)
-
 df<- read.table(paste(DIR, "MergeDataSet.csv", sep=""), sep=",", header=TRUE)
-#print(head(df))
-
-number_of_movies <- function(yrsum) {
-  print(paste("Number of Movies made in ", yrsum))
-}
-
-# Convert data to tbl class. tbl are easier to examine then dataframes.
 ldf <- tbl_df(df)
+```
 
-#ldf %>% group_by(Year) %>% tally(sort=TRUE) %>% table() %>% head()
+```{r echo=FALSE, message=FALSE}
 yrsum<-ldf %>% group_by(Year) %>% summarise(n())
 p<-ggplot(yrsum, aes(x=Year, y=`n()`, col=`n()`)) + geom_point(alpha=0.9) + geom_smooth(se=FALSE)
-#print(p)
+print(p)
+```
 
+## R Markdown
+
+# Movies Genre
+
+```{r echo=FALSE, message=FALSE}
 category<-ldf %>% group_by(Genre) %>% summarise(n())
 
 p<-ggplot(category, aes(x=Genre, y=`n()`)) + geom_point(alpha=0.5)
-#print(p)
+print(p)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
