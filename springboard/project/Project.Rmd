@@ -1,9 +1,12 @@
 ---
-title: "Project (Rough Draft)"
+title: "Movie Modeling"
 output: html_document
 ---
+## Overview
+As proposed in initial project submission, this project intends to perform study on the movie industry trends and model  
+prediction for the future trends.
 
-# Number of Movies/Year
+### Number of Movies/Year
 
 ```{r echo=FALSE, message=FALSE}
 library(dplyr)
@@ -16,27 +19,43 @@ ldf <- tbl_df(df)
 
 ```{r echo=FALSE, message=FALSE}
 yrsum<-ldf %>% group_by(Year) %>% summarise(n())
-p<-ggplot(yrsum, aes(x=Year, y=`n()`, col=`n()`)) + geom_point(alpha=0.9) + geom_smooth(se=FALSE)
+p<-ggplot(yrsum, aes(x=Year, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") + theme_minimal()
+print(p)
+```
+### Model Linear Regression 
+
+```{r}
+#train_data <- subset(ldf, Year > 1975)
+train_data <- ldf
+yrsum<-train_data %>% group_by(Year) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+p<-ggplot(yrsum, aes(x=Year, y=`n()`)) + geom_point() +  
+  geom_hline(yintercept=mean.num_of_movie) + 
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+
 print(p)
 ```
 
-## R Markdown
+## 
 
 # Movies Genre
 
 ```{r echo=FALSE, message=FALSE}
 category<-ldf %>% group_by(Genre) %>% summarise(n())
 
-p<-ggplot(category, aes(x=Genre, y=`n()`)) + geom_point(alpha=0.5)
+p<-ggplot(category, aes(x=Genre, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") +   
+      theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))
 print(p)
 ```
 
-## Including Plots
+##  Model Linear Regression
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+category<-ldf %>% group_by(Genre) %>% summarise(n())
+
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
