@@ -49,13 +49,109 @@ p<-ggplot(category, aes(x=Genre, y=`n()`)) + geom_bar(stat="identity", width = 1
 print(p)
 ```
 
-##  Model Linear Regression
-
-You can also embed plots, for example:
+##  Genre = "Drama"" Linear Regression
 
 ```{r}
-category<-ldf %>% group_by(Genre) %>% summarise(n())
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Drama")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
 
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+print(p)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+##  Genre = "Action" Linear Regression
+
+```{r}
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Action")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+print(p)
+```
+
+##  Genre = "Adventure" Linear Regression
+
+```{r}
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Adventure")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+print(p)
+```
+
+
+##  Genre = "Comedy" Linear Regression
+
+```{r}
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Comedy")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+print(p)
+```
+
+##  Genre = "Horror" Linear Regression
+
+```{r}
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Horror")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+print(p)
+```
+
+##  Genre = "Western" Linear Regression
+
+```{r}
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Western")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+print(p)
+```
+
+
+##  Genre = "Thriller/Suspense" Linear Regression
+
+```{r}
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Thriller/Suspense")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+print(p)
+```

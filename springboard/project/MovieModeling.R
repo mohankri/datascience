@@ -34,6 +34,16 @@ p<-ggplot(yrsum, aes(x=Year, y=`n()`)) + geom_point() +
   geom_hline(yintercept=mean.num_of_movie) + 
   geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
 
+#print(p)
+
+# Genre Drama
+train_data <- ldf
+train_data <- train_data %>% filter(train_data$Genre == "Drama")
+yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
+model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+
+p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
+  geom_hline(yintercept=mean.num_of_movie) +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
 print(p)
-
-
