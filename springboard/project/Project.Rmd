@@ -2,156 +2,334 @@
 title: "Movie Modeling"
 output: html_document
 ---
-## Overview
-As proposed in initial project submission, this project intends to perform study on the movie industry trends and model  
-prediction for the future trends.
 
-### Number of Movies/Year
+
+## Overview
+This data science project intent to analysize movies trends from available dataset  
+available from last 100+ years.
+
+Asking appropriate question or performing EDA (Exploratory Data Analysis) with the  
+available dataset will help answer various trends in the past, present and probable   
+future trends.
+
+We expect that we will able to produce/answer following answer with the available  
+dataset that will be of great help to the target audience.
+
+We are asking the following question with the available dataset  
+
+* What's has been the trend of Movie Genre being made in last 100+ yrs ?
+* What's has been the production budget trend ?
+* What's has been the production budget per Genre ?
+* What's has been the domestic box office collection ?
+* What's type of genre tend to maximize profit for production houses ?
+* What's month of year sees minimum/maximum movie releases ?
+
+
+### Target Audience 
+
+This exploratory study is intent to target focus group who are related to entertainment
+industry. 
+
+1. Production Houses
+    + Disney
+    + Universal Studio
+2. Entertainment Media Industry
+    + Film Magzines.
+    + Film Critics.
+3. New entrepreneur to the Movie Industry.
+4. Theatre Owner.
+
+Individual client can see ongoing trends and apply predictive analysis with answer  
+available for the above question. With the limited budget available for each production  
+houses, better and wise decision can be made to fund genre to maximize profit.
+
+Theater Owner can better decide on leasing theater space as volume of movie release  
+varies for each month.
+
+Film Critics/Film Magzines can analyzes further with changing times how the taste of  
+audience have occurred and can be a dataset for other datascience studies being done  
+for behaviour changes occuring in the society.
+
+### Data Acquisition
+We will acquire the data from http://www.the-numbers.com/movies. The webcrawler  
+will acquire the dataset for each year and perform DataWrangling and present it
+as a single source dataset.
+
+Release Date | Movie       | Genre   | Production Budget | Domestic BoxOffice To Date
+-------------|-------------|---------|-------------------|---------------------------
+September 5  | Intolerance |Adventure| $200,000          | $8,000,000
+December 31  | The Cabinet of Dr. Caligari| Horror | $150,000 | $300,000 
+
+There are source for data acquisition and with project webcrawler can be extend for   other sources and data wrangling process can mitigate/resolve difference appropriately.
+
+### Deliverables
+This project will include R code and will be posted here 
+**[github.com](https://github.com/mohankri/datascience/tree/master/springboard/project)**
+
+It will also include result html (using R-markdown) have answer to the problem  
+stated above.
+
+Deliverables will include complete dataset, webCrawler for performing any update
+of dataset.
+
+```{r echo=FALSE, message=FALSE}
+  DIR <- "~/datascience/springboard/project/"
+  setwd(DIR)
+  file<-list.files(paste(DIR, "./csv_files/",sep=""))
+```
+
+### Goal
+The Goal is to model prediction for the following
+
+1. Number of movies to be made in each individual genre. 
+2. Production Budget Trend
+3. Domestic Box-Office Collection Trend.
+
+-->
 
 ```{r echo=FALSE, message=FALSE}
 library(dplyr)
 library(ggplot2)
+library(lattice)
+library(devtools)
+library(statisticalModeling)
+library(rpart)
 DIR<-paste(Sys.getenv("HOME"), "/datascience/springboard/project/", sep="")
 setwd(DIR)
 df<- read.table(paste(DIR, "MergeDataSet.csv", sep=""), sep=",", header=TRUE)
 ldf <- tbl_df(df)
+caption<-labs(caption="Based on the-numbers.com")
 ```
+
+
+
+
+## Overall Trend for Number of Movies
 
 ```{r echo=FALSE, message=FALSE}
 yrsum<-ldf %>% group_by(Year) %>% summarise(n())
-p<-ggplot(yrsum, aes(x=Year, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") + theme_minimal()
-print(p)
-```
-### Model Linear Regression 
-
-```{r}
-#train_data <- subset(ldf, Year > 1975)
-train_data <- ldf
-yrsum<-train_data %>% group_by(Year) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
-p<-ggplot(yrsum, aes(x=Year, y=`n()`)) + geom_point() +  
-  geom_hline(yintercept=mean.num_of_movie) + 
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
-
+p<-ggplot(yrsum, aes(x=Year, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") + theme_minimal() +
+  labs(title="Number of Movies by Year") + labs(x="Year") + labs(y="Total Number of Movies") + caption
 print(p)
 ```
 
-## 
-
-# Movies Genre
+## Overall Trend of Movies by Genre
 
 ```{r echo=FALSE, message=FALSE}
 category<-ldf %>% group_by(Genre) %>% summarise(n())
 
-p<-ggplot(category, aes(x=Genre, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") +   
-      theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))
-print(p)
-```
-
-##  Genre = "Drama"" Linear Regression
-
-```{r}
-train_data <- ldf
-train_data <- train_data %>% filter(train_data$Genre == "Drama")
-yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
-
-p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
-  geom_hline(yintercept=mean.num_of_movie) +
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
-print(p)
-```
-
-##  Genre = "Action" Linear Regression
-
-```{r}
-train_data <- ldf
-train_data <- train_data %>% filter(train_data$Genre == "Action")
-yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
-
-p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
-  geom_hline(yintercept=mean.num_of_movie) +
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
-print(p)
-```
-
-##  Genre = "Adventure" Linear Regression
-
-```{r}
-train_data <- ldf
-train_data <- train_data %>% filter(train_data$Genre == "Adventure")
-yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
-
-p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
-  geom_hline(yintercept=mean.num_of_movie) +
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+p<-ggplot(category, aes(x=Genre, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") + theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5)) +
+  labs(title="Number of Movies by Genre") + labs(x="Genre") + labs(y="Total Number of Movies") + caption
 print(p)
 ```
 
 
-##  Genre = "Comedy" Linear Regression
+##Model Prediction Genre="Drama" 
 
 ```{r}
-train_data <- ldf
-train_data <- train_data %>% filter(train_data$Genre == "Comedy")
-yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+train_data <- tbl_df(df)
+genre<-train_data %>% group_by(Year, Genre) %>% summarise(n())
+drama <- subset(genre, Genre=="Drama")
+drama <- subset(drama, Year<2018)
 
-p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
-  geom_hline(yintercept=mean.num_of_movie) +
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+model1 <- lm(drama$`n()`~Year, data=drama)
+mean.num_of_movie=mean(genre$`n()`, na.rm=T)
+
+p<-ggplot(drama, aes(x=Year, y=`n()`)) + geom_point() + 
+  geom_hline(yintercept=mean.num_of_movie, color="green") + 
+  geom_abline(intercept=model1$coefficients[1],
+          slope=model1$coefficients[2], color="red") + 
+          stat_smooth(method="loess", formula = y ~ x, size=1) +
+          labs(title="Genre=Drama") + labs(x="Year") +
+          labs(y="Number of Movies(Drama)") + caption
+
 print(p)
 ```
 
-##  Genre = "Horror" Linear Regression
+## Model Prediction Genre="Action" 
 
 ```{r}
-train_data <- ldf
-train_data <- train_data %>% filter(train_data$Genre == "Horror")
-yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+action <- subset(genre, Genre=="Action")
+action <- subset(action, Year < 2018)
+model1 <- lm(action$`n()`~Year, data=action)
+mean.num_of_movie=mean(action$`n()`, na.rm=T)
 
-p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
-  geom_hline(yintercept=mean.num_of_movie) +
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
-print(p)
-```
+p<-ggplot(action, aes(x=Year, y=`n()`)) + geom_point() + 
+  geom_hline(yintercept=mean.num_of_movie, color="green") + 
+  geom_abline(intercept=model1$coefficients[1],
+          slope=model1$coefficients[2], color="red") + 
+          stat_smooth(method="loess", formula = y ~ x, size=1) +
+          labs(title="Genre=Action") + labs(x="Year") +
+          labs(y="Number of Movies(Action)") + caption
 
-##  Genre = "Western" Linear Regression
-
-```{r}
-train_data <- ldf
-train_data <- train_data %>% filter(train_data$Genre == "Western")
-yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
-
-p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
-  geom_hline(yintercept=mean.num_of_movie) +
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
 print(p)
 ```
 
 
-##  Genre = "Thriller/Suspense" Linear Regression
+## Model Prediction Genre="Adventure"
 
 ```{r}
-train_data <- ldf
-train_data <- train_data %>% filter(train_data$Genre == "Thriller/Suspense")
-yrsum<-train_data %>% group_by(Year, Genre) %>% summarise(n())
-mean.num_of_movie=mean(yrsum$`n()`, na.rm=T)
-model1 <- lm(yrsum$`n()`~Year, data=yrsum)
+adven <- subset(genre, Genre=="Adventure")
+adven <- subset(adven, Year < 2018)
 
-p<-ggplot(yrsum, aes(x=Year, y=yrsum$`n()`)) + geom_point() +
-  geom_hline(yintercept=mean.num_of_movie) +
-  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red")
+model1 <- lm(adven$`n()`~Year, data=adven)
+mean.num_of_movie=mean(adven$`n()`, na.rm=T)
+
+p<-ggplot(adven, aes(x=Year, y=`n()`)) + geom_point() + 
+  geom_hline(yintercept=mean.num_of_movie, color="green") + 
+  geom_abline(intercept=model1$coefficients[1],
+          slope=model1$coefficients[2], color="red") + 
+          stat_smooth(method="loess", formula = y ~ x, size=1) +
+          labs(title="Genre=Adventure") + labs(x="Year") +
+          labs(y="Number of Movies(Adventure)") + caption
+
+print(p)
+```
+
+
+## Model Prediction Genre="Comedy"
+
+```{r}
+comedy <- subset(genre, Genre=="Comedy")
+comedy <- subset(comedy, Year < 2018)
+
+model1 <- lm(comedy$`n()`~Year, data=comedy)
+mean.num_of_movie=mean(comedy$`n()`, na.rm=T)
+
+p<-ggplot(comedy, aes(x=Year, y=`n()`)) + geom_point() + 
+  geom_hline(yintercept=mean.num_of_movie, color="green") + 
+  geom_abline(intercept=model1$coefficients[1],
+          slope=model1$coefficients[2], color="red") + 
+          stat_smooth(method="loess", formula = y ~ x, size=1) +
+          labs(title="Genre=Comedy") + labs(x="Year") +
+          labs(y="Number of Movies(Comedy)") + caption
+
+print(p)
+```
+
+
+##  Model Prediction Genre="Horror"
+
+```{r}
+horror <- subset(genre, Genre=="Horror")
+horror <- subset(horror, Year < 2018)
+
+model1 <- lm(horror$`n()`~Year, data=horror)
+mean.num_of_movie=mean(horror$`n()`, na.rm=T)
+
+p<-ggplot(horror, aes(x=Year, y=`n()`)) + geom_point() + 
+  geom_hline(yintercept=mean.num_of_movie, color="green") + 
+  geom_abline(intercept=model1$coefficients[1],
+          slope=model1$coefficients[2], color="red") + 
+          stat_smooth(method="loess", formula = y ~ x, size=1) +
+          labs(title="Genre=Horror") + labs(x="Year") +
+          labs(y="Number of Movies(Horror)") + caption
+
+print(p)
+```
+
+
+##Model Prediction Genre="Western"
+
+```{r}
+western <- subset(genre, Genre=="Western")
+western <- subset(western, Year < 2018)
+
+model1 <- lm(western$`n()`~Year, data=western)
+mean.num_of_movie=mean(western$`n()`, na.rm=T)
+
+p<-ggplot(western, aes(x=Year, y=`n()`)) + geom_point() + 
+  geom_hline(yintercept=mean.num_of_movie, color="green") + 
+  geom_abline(intercept=model1$coefficients[1],
+          slope=model1$coefficients[2], color="red") + 
+          stat_smooth(method="loess", formula = y ~ x, size=1) +
+          labs(title="Genre=Western") + labs(x="Year") +
+          labs(y="Number of Movies(Western)") + caption
+
+print(p)
+```
+
+
+##Model Prediction Genre="Thriller/Suspense"
+
+```{r}
+thriller <- subset(genre, Genre=="Thriller/Suspense")
+thriller <- subset(thriller, Year < 2018)
+
+model1 <- lm(thriller$`n()`~Year, data=thriller)
+mean.num_of_movie=mean(thriller$`n()`, na.rm=T)
+
+p<-ggplot(thriller, aes(x=Year, y=`n()`)) + geom_point() + 
+  geom_hline(yintercept=mean.num_of_movie, color="green") + 
+  geom_abline(intercept=model1$coefficients[1],
+          slope=model1$coefficients[2], color="red") + 
+          stat_smooth(method="loess", formula = y ~ x, size=1) +
+          labs(title="Genre=Thriller/Suspense") + labs(x="Year") +
+          labs(y="Number of Movies(Thriller/Suspense)") + caption
+
+print(p)
+```
+
+
+## Production Budget Trend
+```{r echo=FALSE, message=FALSE}
+pbudget<-ldf %>% group_by(Year, ProductionBudget) %>% summarise(n())
+pbudget$ProductionBudget <- as.numeric(gsub('[$,]', '', pbudget$ProductionBudget))
+aggrP<-aggregate(pbudget$ProductionBudget, by=list(Year=pbudget$Year), FUN=sum, na.rm=T)
+
+aggrP<-subset(aggrP, aggrP$Year < 2018)
+
+p<-ggplot(aggrP, aes(x=aggrP$Year, y=aggrP$x)) + 
+  geom_bar(stat="identity", width = 0.5, fill="steelblue") + theme_minimal() +
+  labs(title="Total Production Budget By Year") + labs(x="Year") + labs(y="Total Production Budget") + caption
+
+print(p)
+```
+
+## Domestic Box-Office Collection Trend
+```{r echo=FALSE, message=FALSE}
+dbudget<-ldf %>% group_by(Year, DomesticBox.Officeto.Date) %>% summarise(n())
+dbudget$DomesticBox.Officeto.Date <- as.numeric(gsub('[$,]', '', dbudget$DomesticBox.Officeto.Date))
+
+aggrD<-aggregate(dbudget$DomesticBox.Officeto.Date, by=list(Year=dbudget$Year), FUN=sum, na.rm=T)
+
+aggrD<-subset(aggrD, aggrD$Year < 2018)
+
+
+p<-ggplot(aggrD, aes(x=aggrD$Year, y=aggrD$x)) + 
+  geom_bar(stat="identity", width = 0.5, fill="steelblue") + theme_minimal() +
+  labs(title="Domestic Box-Office Collection By Year") + labs(x="Year") + labs(y="Domestic Box-Office Collection") + caption
+
+print(p)
+```
+
+##Model Prediction for Production Budget
+
+```{r}
+mean.pbudget<-mean(aggrP$x, na.rm=T)
+model1 <- lm(aggrP$x~Year, data=aggrP)
+
+p<-ggplot(aggrP, aes(x=aggrP$Year, y=aggrP$x)) + geom_point() + 
+  geom_hline(yintercept=mean.pbudget, color="green") +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red") +
+  stat_smooth(method="loess", formula = y ~ x, size=1) + 
+  labs(title="Production Budget By Year") + labs(x="Year") + labs(y="Production Budget") + caption
+
+print(p)
+```
+
+##Model Prediction for Domestic Box-Office Collection
+
+```{r}
+mean.pbudget<-mean(aggrD$x, na.rm=T)
+model1 <- lm(aggrD$x~Year, data=aggrD)
+
+p<-ggplot(aggrD, aes(x=aggrD$Year, y=aggrD$x)) + geom_point() + 
+  geom_hline(yintercept=mean.pbudget, color="green") +
+  geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red") +
+  stat_smooth(method="loess", formula = y ~ x, size=1) + 
+    labs(title="Domestic Box-Office Collection By Year") + labs(x="Year") + labs(y="Domestic Box-Office Collection") + caption
+
+
 print(p)
 ```
