@@ -85,7 +85,6 @@ The Goal is to model prediction for the following
 2. Production Budget Trend
 3. Domestic Box-Office Collection Trend.
 
--->
 
 ```{r echo=FALSE, message=FALSE}
 library(dplyr)
@@ -100,8 +99,6 @@ df<- read.table(paste(DIR, "MergeDataSet.csv", sep=""), sep=",", header=TRUE)
 ldf <- tbl_df(df)
 caption<-labs(caption="Based on the-numbers.com")
 ```
-
-
 
 
 ## Overall Trend for Number of Movies
