@@ -100,6 +100,10 @@ ldf <- tbl_df(df)
 caption<-labs(caption="Based on the-numbers.com")
 ```
 
+# Required Libraries
+This project is developed using R language.
+Install dplyr, ggplot2, lattice, devtools, statiscalModeling and rpart using
+install.packages()
 
 ## Overall Trend for Number of Movies
 
@@ -108,6 +112,8 @@ yrsum<-ldf %>% group_by(Year) %>% summarise(n())
 p<-ggplot(yrsum, aes(x=Year, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") + theme_minimal() +
   labs(title="Number of Movies by Year") + labs(x="Year") + labs(y="Total Number of Movies") + caption
 print(p)
+
+print(head(yrsum))
 ```
 
 ## Overall Trend of Movies by Genre
@@ -118,6 +124,7 @@ category<-ldf %>% group_by(Genre) %>% summarise(n())
 p<-ggplot(category, aes(x=Genre, y=`n()`)) + geom_bar(stat="identity", width = 1, fill="steelblue") + theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5)) +
   labs(title="Number of Movies by Genre") + labs(x="Genre") + labs(y="Total Number of Movies") + caption
 print(p)
+print(head(category))
 ```
 
 
@@ -127,12 +134,15 @@ print(p)
 train_data <- tbl_df(df)
 genre<-train_data %>% group_by(Year, Genre) %>% summarise(n())
 drama <- subset(genre, Genre=="Drama")
-drama <- subset(drama, Year<2018)
 
 model1 <- lm(drama$`n()`~Year, data=drama)
 mean.num_of_movie=mean(genre$`n()`, na.rm=T)
 
-p<-ggplot(drama, aes(x=Year, y=`n()`)) + geom_point() + 
+drama.df=data.frame(drama)
+mp <- cbind(drama.df, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=drama$Year, y=drama$`n()`)) +   geom_point(aes(y = drama$`n()`)) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.num_of_movie, color="green") + 
   geom_abline(intercept=model1$coefficients[1],
           slope=model1$coefficients[2], color="red") + 
@@ -141,17 +151,22 @@ p<-ggplot(drama, aes(x=Year, y=`n()`)) + geom_point() +
           labs(y="Number of Movies(Drama)") + caption
 
 print(p)
+print(summary(drama))
 ```
 
 ## Model Prediction Genre="Action" 
 
 ```{r}
 action <- subset(genre, Genre=="Action")
-action <- subset(action, Year < 2018)
 model1 <- lm(action$`n()`~Year, data=action)
 mean.num_of_movie=mean(action$`n()`, na.rm=T)
 
-p<-ggplot(action, aes(x=Year, y=`n()`)) + geom_point() + 
+action.df=data.frame(action)
+mp <- cbind(action.df, predict(model1, interval = "prediction"))
+
+
+p<-ggplot(mp, aes(x=action$Year, y=action$`n()`)) + geom_point(aes(y = action$`n()`)) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.num_of_movie, color="green") + 
   geom_abline(intercept=model1$coefficients[1],
           slope=model1$coefficients[2], color="red") + 
@@ -160,6 +175,8 @@ p<-ggplot(action, aes(x=Year, y=`n()`)) + geom_point() +
           labs(y="Number of Movies(Action)") + caption
 
 print(p)
+print(summary(action))
+
 ```
 
 
@@ -167,12 +184,15 @@ print(p)
 
 ```{r}
 adven <- subset(genre, Genre=="Adventure")
-adven <- subset(adven, Year < 2018)
 
 model1 <- lm(adven$`n()`~Year, data=adven)
 mean.num_of_movie=mean(adven$`n()`, na.rm=T)
 
-p<-ggplot(adven, aes(x=Year, y=`n()`)) + geom_point() + 
+adven.df=data.frame(adven)
+mp <- cbind(adven.df, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=adven$Year, y=adven$`n()`)) + geom_point(aes(y = adven$`n()`)) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.num_of_movie, color="green") + 
   geom_abline(intercept=model1$coefficients[1],
           slope=model1$coefficients[2], color="red") + 
@@ -181,6 +201,9 @@ p<-ggplot(adven, aes(x=Year, y=`n()`)) + geom_point() +
           labs(y="Number of Movies(Adventure)") + caption
 
 print(p)
+
+print(summary(adven))
+
 ```
 
 
@@ -188,12 +211,15 @@ print(p)
 
 ```{r}
 comedy <- subset(genre, Genre=="Comedy")
-comedy <- subset(comedy, Year < 2018)
 
 model1 <- lm(comedy$`n()`~Year, data=comedy)
 mean.num_of_movie=mean(comedy$`n()`, na.rm=T)
 
-p<-ggplot(comedy, aes(x=Year, y=`n()`)) + geom_point() + 
+comedy.df=data.frame(comedy)
+mp <- cbind(comedy.df, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=comedy$Year, y=comedy$`n()`)) + geom_point(aes(y = comedy$`n()`)) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.num_of_movie, color="green") + 
   geom_abline(intercept=model1$coefficients[1],
           slope=model1$coefficients[2], color="red") + 
@@ -202,6 +228,9 @@ p<-ggplot(comedy, aes(x=Year, y=`n()`)) + geom_point() +
           labs(y="Number of Movies(Comedy)") + caption
 
 print(p)
+
+print(summary(comedy))
+
 ```
 
 
@@ -209,12 +238,15 @@ print(p)
 
 ```{r}
 horror <- subset(genre, Genre=="Horror")
-horror <- subset(horror, Year < 2018)
 
 model1 <- lm(horror$`n()`~Year, data=horror)
 mean.num_of_movie=mean(horror$`n()`, na.rm=T)
 
-p<-ggplot(horror, aes(x=Year, y=`n()`)) + geom_point() + 
+horror.df=data.frame(horror)
+mp <- cbind(horror.df, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=horror$Year, y=horror$`n()`)) + geom_point(aes(y = horror$`n()`)) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.num_of_movie, color="green") + 
   geom_abline(intercept=model1$coefficients[1],
           slope=model1$coefficients[2], color="red") + 
@@ -223,6 +255,8 @@ p<-ggplot(horror, aes(x=Year, y=`n()`)) + geom_point() +
           labs(y="Number of Movies(Horror)") + caption
 
 print(p)
+print(summary(horror))
+
 ```
 
 
@@ -230,12 +264,15 @@ print(p)
 
 ```{r}
 western <- subset(genre, Genre=="Western")
-western <- subset(western, Year < 2018)
 
 model1 <- lm(western$`n()`~Year, data=western)
 mean.num_of_movie=mean(western$`n()`, na.rm=T)
 
-p<-ggplot(western, aes(x=Year, y=`n()`)) + geom_point() + 
+western.df=data.frame(western)
+mp <- cbind(western.df, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=western$Year, y=western$`n()`)) + geom_point(aes(y = western$`n()`)) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.num_of_movie, color="green") + 
   geom_abline(intercept=model1$coefficients[1],
           slope=model1$coefficients[2], color="red") + 
@@ -244,6 +281,8 @@ p<-ggplot(western, aes(x=Year, y=`n()`)) + geom_point() +
           labs(y="Number of Movies(Western)") + caption
 
 print(p)
+print(summary(western))
+
 ```
 
 
@@ -251,12 +290,15 @@ print(p)
 
 ```{r}
 thriller <- subset(genre, Genre=="Thriller/Suspense")
-thriller <- subset(thriller, Year < 2018)
 
 model1 <- lm(thriller$`n()`~Year, data=thriller)
 mean.num_of_movie=mean(thriller$`n()`, na.rm=T)
 
-p<-ggplot(thriller, aes(x=Year, y=`n()`)) + geom_point() + 
+thriller.df=data.frame(thriller)
+mp <- cbind(thriller.df, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=thriller$Year, y=thriller$`n()`)) + geom_point(aes(y = thriller$`n()`)) + 
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.num_of_movie, color="green") + 
   geom_abline(intercept=model1$coefficients[1],
           slope=model1$coefficients[2], color="red") + 
@@ -265,6 +307,9 @@ p<-ggplot(thriller, aes(x=Year, y=`n()`)) + geom_point() +
           labs(y="Number of Movies(Thriller/Suspense)") + caption
 
 print(p)
+
+print(summary(thriller))
+
 ```
 
 
@@ -274,13 +319,14 @@ pbudget<-ldf %>% group_by(Year, ProductionBudget) %>% summarise(n())
 pbudget$ProductionBudget <- as.numeric(gsub('[$,]', '', pbudget$ProductionBudget))
 aggrP<-aggregate(pbudget$ProductionBudget, by=list(Year=pbudget$Year), FUN=sum, na.rm=T)
 
-aggrP<-subset(aggrP, aggrP$Year < 2018)
-
 p<-ggplot(aggrP, aes(x=aggrP$Year, y=aggrP$x)) + 
   geom_bar(stat="identity", width = 0.5, fill="steelblue") + theme_minimal() +
   labs(title="Total Production Budget By Year") + labs(x="Year") + labs(y="Total Production Budget") + caption
 
 print(p)
+
+print(summary(pbudget))
+
 ```
 
 ## Domestic Box-Office Collection Trend
@@ -290,14 +336,13 @@ dbudget$DomesticBox.Officeto.Date <- as.numeric(gsub('[$,]', '', dbudget$Domesti
 
 aggrD<-aggregate(dbudget$DomesticBox.Officeto.Date, by=list(Year=dbudget$Year), FUN=sum, na.rm=T)
 
-aggrD<-subset(aggrD, aggrD$Year < 2018)
-
-
-p<-ggplot(aggrD, aes(x=aggrD$Year, y=aggrD$x)) + 
+p<-ggplot(aggrD, aes(x=aggrD$Year, y=aggrD$x)) +
   geom_bar(stat="identity", width = 0.5, fill="steelblue") + theme_minimal() +
   labs(title="Domestic Box-Office Collection By Year") + labs(x="Year") + labs(y="Domestic Box-Office Collection") + caption
 
 print(p)
+print(summary(aggrD))
+
 ```
 
 ##Model Prediction for Production Budget
@@ -306,13 +351,18 @@ print(p)
 mean.pbudget<-mean(aggrP$x, na.rm=T)
 model1 <- lm(aggrP$x~Year, data=aggrP)
 
-p<-ggplot(aggrP, aes(x=aggrP$Year, y=aggrP$x)) + geom_point() + 
+mp <- cbind(aggrP, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=aggrP$Year, y=aggrP$x)) + geom_point(aes(y = aggrP$x)) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.pbudget, color="green") +
   geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red") +
   stat_smooth(method="loess", formula = y ~ x, size=1) + 
   labs(title="Production Budget By Year") + labs(x="Year") + labs(y="Production Budget") + caption
 
 print(p)
+print(summary(aggrP))
+
 ```
 
 ##Model Prediction for Domestic Box-Office Collection
@@ -321,12 +371,18 @@ print(p)
 mean.pbudget<-mean(aggrD$x, na.rm=T)
 model1 <- lm(aggrD$x~Year, data=aggrD)
 
-p<-ggplot(aggrD, aes(x=aggrD$Year, y=aggrD$x)) + geom_point() + 
+#horror.df=data.frame(horror)
+mp <- cbind(aggrD, predict(model1, interval = "prediction"))
+
+p<-ggplot(mp, aes(x=aggrD$Year, y=aggrD$x)) + geom_point(y=aggrD$x) +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), fill = "blue", alpha = 0.2) +
   geom_hline(yintercept=mean.pbudget, color="green") +
   geom_abline(intercept=model1$coefficients[1], slope=model1$coefficients[2], color="red") +
   stat_smooth(method="loess", formula = y ~ x, size=1) + 
     labs(title="Domestic Box-Office Collection By Year") + labs(x="Year") + labs(y="Domestic Box-Office Collection") + caption
 
-
 print(p)
 ```
+
+### Acknowledgement
+Many thanks to my mentor Sneha Runwal for the guidance and help. I really appreciate her guidance in navigating introductory data science project.
