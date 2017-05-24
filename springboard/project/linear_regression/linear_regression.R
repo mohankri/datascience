@@ -1,5 +1,4 @@
 #  Introduction
-## ══════════════
 
 #   • Learning objectives:
 ##     • Learn the R formula interface
@@ -7,37 +6,23 @@
 ##     • Perform model comparisons
 ##     • Run and interpret variety of regression models in R
 
-## Set working directory
-## ─────────────────────────
-
-##   It is often helpful to start your R session by setting your working
-##   directory so you don't have to type the full path names to your data
-##   and other files
-
-# set the working directory
-# setwd("~/Desktop/Rstatistics")
-# setwd("C:/Users/dataclass/Desktop/Rstatistics")
-
 ##   You might also start by listing the files in your working directory
 
 getwd() # where am I?
 list.files("dataSets") # files in the dataSets folder
 
 ## Load the states data
-## ────────────────────────
 
 # read the states data
-states.data <- readRDS("dataSets/states.rds") 
+states.data <- readRDS("~/datascience/springboard/project/linear_regression/dataSets/states.rds") 
 #get labels
 states.info <- data.frame(attributes(states.data)[c("names", "var.labels")])
 #look at last few labels
 tail(states.info, 8)
 
 ## Linear regression
-## ═══════════════════
 
 ## Examine the data before fitting models
-## ──────────────────────────────────────────
 
 ##   Start by examining the data to check for problems.
 
@@ -48,7 +33,6 @@ summary(sts.ex.sat)
 cor(sts.ex.sat)
 
 ## Plot the data before fitting models
-## ───────────────────────────────────────
 
 ##   Plot the data to look for multivariate outliers, non-linear
 ##   relationships etc.
@@ -57,7 +41,6 @@ cor(sts.ex.sat)
 plot(sts.ex.sat)
 
 ## Linear regression example
-## ─────────────────────────────
 
 ##   • Linear regression models can be fit with the `lm()' function
 ##   • For example, we can use `lm' to predict SAT scores based on
@@ -70,7 +53,6 @@ sat.mod <- lm(csat ~ expense, # regression formula
 summary(sat.mod) # show regression coefficients table
 
 ## Why is the association between expense and SAT scores /negative/?
-## ─────────────────────────────────────────────────────────────────────
 
 ##   Many people find it surprising that the per-capita expenditure on
 ##   students is negatively related to SAT scores. The beauty of multiple
@@ -82,7 +64,6 @@ summary(sat.mod) # show regression coefficients table
 summary(lm(csat ~ expense + percent, data = states.data))
 
 ## The lm class and methods
-## ────────────────────────────
 
 ##   OK, we fit our model. Now what?
 ##   • Examine the model object:
@@ -97,7 +78,6 @@ confint(sat.mod)
 # hist(residuals(sat.mod))
 
 ## Linear Regression Assumptions
-## ─────────────────────────────────
 
 ##   • Ordinary least squares regression relies on several assumptions,
 ##     including that the residuals are normally distributed and
@@ -110,7 +90,6 @@ par(mar = c(4, 4, 2, 2), mfrow = c(1, 2)) #optional
 plot(sat.mod, which = c(1, 2)) # "which" argument optional
 
 ## Comparing models
-## ────────────────────
 
 ##   Do congressional voting patterns predict SAT scores over and above
 ##   expense? Fit two models and compare them:
@@ -124,7 +103,6 @@ anova(sat.mod, sat.voting.mod)
 coef(summary(sat.voting.mod))
 
 ## Exercise: least squares regression
-## ────────────────────────────────────────
 
 ##   Use the /states.rds/ data set. Fit a model predicting energy consumed
 ##   per capita (energy) from the percentage of residents living in
@@ -137,11 +115,32 @@ coef(summary(sat.voting.mod))
 ##   repeat steps 1-3. Is this model significantly better than the model
 ##   with /metro/ as the only predictor?
 
+
+# summary
+sts.ex.sat <- subset(states.data, select = c("metro", "energy"))
+summary(sts.ex.sat)
+# correlation
+cor(sts.ex.sat)
+# scatter plot before fitting the model
+plot(sts.ex.sat)
+# Fit our regression model
+sat.mod <- lm(energy ~ metro, # regression formula
+              data=states.data) # data set
+# Summarize and print the results
+summary(sat.mod) # show regression coefficients table
+par(mar = c(4, 4, 2, 2), mfrow = c(1, 2)) #optional
+plot(sat.mod, which = c(1, 2)) # "which" argument optional
+
+sat.income.mod <-  lm(energy ~ metro + income ,
+                      data = na.omit(states.data))
+sat.mod <- update(sat.mod, data=na.omit(states.data))
+# compare using the anova() function
+anova(sat.mod, sat.income.mod)
+coef(summary(sat.income.mod))
+
 ## Interactions and factors
-## ══════════════════════════
 
 ## Modeling interactions
-## ─────────────────────────
 
 ##   Interactions allow us assess the extent to which the association
 ##   between one predictor and the outcome depends on a second predictor.
@@ -155,7 +154,6 @@ sat.expense.by.percent <- lm(csat ~ expense*income,
   coef(summary(sat.expense.by.percent)) # show regression coefficients table
 
 ## Regression with categorical predictors
-## ──────────────────────────────────────────
 
 ##   Let's try to predict SAT scores from region, a categorical variable.
 ##   Note that you must make sure R does not think your categorical
@@ -175,7 +173,6 @@ anova(sat.region) # show ANOVA table
 ##   converting them to factors!*
 
 ## Setting factor reference groups and contrasts
-## ─────────────────────────────────────────────────
 
 ##   In the previous example we use the default contrasts for region. The
 ##   default in R is treatment contrasts, with the first level as the
@@ -194,7 +191,6 @@ coef(summary(lm(csat ~ C(region, contr.helmert),
 ##   See also `?contrasts', `?contr.treatment', and `?relevel'.
 
 ## Exercise: interactions and factors
-## ────────────────────────────────────────
 
 ##   Use the states data set.
 
@@ -203,3 +199,25 @@ coef(summary(lm(csat ~ C(region, contr.helmert),
 
 ##   2. Try adding region to the model. Are there significant differences
 ##      across the four regions?
+
+#Add the interaction to the model
+sat.income.by.percent <- lm(energy ~ metro*income,
+                             data=states.data) 
+
+coef(summary(sat.income.by.percent))
+
+
+sat.region2 <- lm(energy ~ region,
+                 data=states.data) 
+#Show the results
+coef(summary(sat.region2)) # show regression coefficients table
+anova(sat.region2) # show ANOVA table
+
+# print default contrasts
+contrasts(states.data$region)
+# change the reference group
+coef(summary(lm(energy ~ C(region, base=4),
+                data=states.data)))
+# change the coding scheme
+coef(summary(lm(energy ~ C(region, contr.helmert),
+data=states.data)))
