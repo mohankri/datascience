@@ -1,0 +1,111 @@
+---
+title: "Intro to dplyr"
+output: html_document
+author: "Krishna Mohan"
+---
+```{r}
+library(dplyr)
+library(hflights)
+
+#explore data
+data(hflights)
+head(hflights) 
+```
+
+#take the dataset into local dataframe
+```{r}
+flights <- tbl_df(hflights)
+#flights
+print(flights, n=20)
+data.frame(head(flights))
+```
+
+# filter verb: keeps rows with matching criteria
+```{r}
+flights[flights$Month==2 & flights$DayofMonth==1, ]
+```
+
+```{r}
+filter(flights, Month==1, DayofMonth ==1)
+
+# pipe
+filter(flights, UniqueCarrier=="AA" | UniqueCarrier=="UA")
+
+# or
+# filter(flights, UniqueCarrier %in% c("AA", "UA"))
+```
+
+# Select verb
+```{r}
+# basic approach to select col
+# flights[, c("DepTime", "ArrTime", "FlightNum")]
+
+#deplyr approach
+select(flights, DepTime, ArrTime, FlightNum)
+
+#select column from year - DayOfMonth, column names contains Taxi and Delay
+select(flights, Year:DayofMonth, contains("Taxi"), contains("Delay"))
+```
+
+## Chaining or Pipelining
+```{r results='hide'}
+filter(select(flights, UniqueCarrier, DepDelay), DepDelay > 60)
+```
+
+```{r}
+# Chaining Method
+
+flights %>%
+  select(UniqueCarrier, DepDelay) %>%
+  filter(DepDelay > 60)
+```
+
+## arrange: Reorder rows
+
+```{r}
+#flights[order(flights$DepDelay), c("UniqueCarrier", "DepDelay")]
+
+#dplyr approach
+flights %>%
+  select(UniqueCarrier, DepDelay) %>%
+  arrange(desc(DepDelay))
+```
+
+## mutate
+```{r results='hide'}
+# baseR approach
+flights$Speed <- flights$Distance / flights$AirTime*60
+flights[, c("Distance", "AirTime", "Speed")]
+```
+```{r}
+#dplyr apprach
+flights %>%
+  select(Distance, AirTime) %>%
+  mutate(Speed = Distance/AirTime*60)
+
+# Store
+#flights <- flights %>% mutate(Speed = Distance/AirTime%60)
+```
+
+## Summarise: Reduce variable to value
+
+```{r}
+# remove flights obhect
+rm(flights)
+suppressMessages(library(nycflights13))
+flights
+
+```
+
+## Chose colums 
+```{r}
+flights %>% select(carrier, flight)
+```
+
+#DataFrame
+```{r}
+data_frame(a=1:6, b = a*2, c="string", "d+e"=1) %>% glimpse()
+```
+
+
+

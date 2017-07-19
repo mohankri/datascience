@@ -1,0 +1,10 @@
+subset
+======
+subset(my_df, subset= dia < 1)
+subset(my_df, subset= dia < 1)
+
+order
+====
+order gives ranking to each vector element
+
+order(my_df$dia)  order dataframe

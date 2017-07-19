@@ -1,0 +1,30 @@
+install.packages("tidyr")
+
+library(tidyr)
+
+gather(df, "year", "n", 2:4)
+spread(df, size, amount)
+
+unite() : unite several column to 1 column
+separate(): split 1 column to many column
+
+install.packages("dplyr")
+
+select(storms, storm, pressure) -> extract specified column(storm and pressure) from storms data frame.
+
+filter(storms, wind >= 50)
+
+mutate(storms, wind/10) -> add new columnA
+
+summarise() -> summaries(median = median(amount), variance = var(amount))
+
+arrange(storms, wind) or arrange(storms, desc(wind))
+
+bild_cols(y, z) //dangerous but combine dataset
+bind_rows(y, z) // bind rows)
+union(y,z)
+interset(y, z)
+setdiff(y, z)
+
+left_join(song, artist, by="name")
+inner_join(song, artist, by="name") //includes if available in both dataset

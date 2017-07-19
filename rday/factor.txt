@@ -1,0 +1,22 @@
+factors
+========
+gender <- c("Male", "Female", "Male", "Female", "Male")
+
+there are 2 categories male and female
+
+gender_factor <- factor(gender)
+
+temp <- c("High", "Low", "High", "Low", "Medium")
+temp_vec <- factor(temp, order=TRUE, levels=c("Low", "Medium", "High"))
+
+Mapping factor names
+===================
+s_vec <- c("M", "F", "F", "M", "M")
+s_fac <- factor(s_vec) 
+
+levels(s_fac) <- c("FeMale", "Male")  // F->Female M->Male
+
+Summary vector or factory
+=========================
+summary(factor)
+summary(vector>

@@ -1,0 +1,19 @@
+
+my_list<-list(vect, mat, df)
+
+creating named list
+
+names(my_list) <- c("vector", "matrix", "data frame")
+
+creating named list
+my_list <- list(vector=vect, matrix=mat, dataframe=df)
+
+
+unlist(list_name) convert list to vector
+
+
+TBD: Revisit List
+=============
+
+
+

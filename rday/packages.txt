@@ -1,0 +1,14 @@
+R Packages
+=========
+install.packages("ggvis") goes to CRAN and install the package
+
+search() search the loaded packages
+
+library("ggvis") load the package
+
+require("ggvis") load the package if not already installed
+
+plyr
+===
+lapply
+
